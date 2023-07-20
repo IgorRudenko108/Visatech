@@ -1029,10 +1029,6 @@ body {
   line-height: 130%;
 }
 
-.social {
-  margin-bottom: 20px;
-}
-
 .social__inner {
   display: -ms-grid;
   display: grid;
@@ -1283,6 +1279,10 @@ body {
 
   .visa__item-text {
     font-size: 1.125rem;
+  }
+
+  .social {
+    margin-bottom: 4.6875rem;
   }
 
   .social__item {
@@ -1606,7 +1606,8 @@ body {
   }
 
   .social__item {
-    margin: 0 -10px;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .social__item-2 h2 {
@@ -1715,6 +1716,10 @@ body {
 
   .visa__item-title {
     font-size: 1.5rem;
+  }
+
+  .social {
+    margin-bottom: 1.25rem;
   }
 
   .social__link svg {
@@ -1946,6 +1951,18 @@ body {
 @supports not (font-size: clamp( 1.5rem , 1.125023437rem  +  1.2499739589vw , 2.25rem )) {
     .visa__item-title {
       font-size: calc(1.5rem + 0.75 * (100vw - 29.99875rem) / 60.00125);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , -0.4686425804rem  +  5.7290473115vw , 4.6875rem )) {
+    .social {
+      margin-bottom: clamp( 1.25rem , -0.4686425804rem  +  5.7290473115vw , 4.6875rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , -0.4686425804rem  +  5.7290473115vw , 4.6875rem )) {
+    .social {
+      margin-bottom: calc(1.25rem + 3.4375 * (100vw - 29.99875rem) / 60.00125);
     }
 }
 
